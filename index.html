@@ -7,11 +7,34 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <title>Movie App</title>
   </head>
   <body>
-    <header onclick="changeModeFunc();">Header</header>
+    <header>
+      <div class="header-left">
+        <p class="logo">dreamW<i class="fa-solid fa-earth-americas"></i>rld</p>
+        <div class="links">
+          <p>Home</p>
+          <p>Movies</p>
+          <p>Series</p>
+          <p>Popular</p>
+          <p>Trends</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <img src="./img/profile.jpg" alt="" />
+        <div class="mode" onclick="changeModeFunc();">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+          <button class="mode-button-right"></button>
+        </div>
+      </div>
+    </header>
     <main>
       <div class="sidebar">sidebar</div>
       <div class="main-top">main top</div>
@@ -21,3 +44,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+// mode değişimlerinde buttonu sağa sola kaydırma işlemindeyim
