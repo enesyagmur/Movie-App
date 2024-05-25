@@ -38,26 +38,33 @@ i {
   justify-content: flex-end;
 }
 img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .mode {
-  width: 60px;
+  width: 65px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: white;
   border-radius: 15px;
+  border: 1px solid black;
   position: relative;
   color: black;
   cursor: pointer;
 }
+#sun-icon {
+  color: orange;
+}
+#moon-icon {
+  color: greenyellow;
+}
 
-.mode-button-right {
+#mode-button {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -65,9 +72,10 @@ img {
   background-color: black;
   right: 0;
   border: none;
+  transition: all 0.5s;
 }
 
-.mode-button-left {
+.left {
   position: absolute;
   width: 30px;
   height: 30px;
