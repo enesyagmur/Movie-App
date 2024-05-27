@@ -37,7 +37,7 @@ i {
   align-items: center;
   justify-content: flex-end;
 }
-img {
+.header-right img {
   width: 40px;
   height: 40px;
   object-fit: cover;
