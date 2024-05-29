@@ -53,8 +53,12 @@
       </div>
       <div class="main-right">
         <div class="main-top">
-          <p class="movie-name">DJANGO</p>
+          <video class="video" poster="/img/interstaller.jpg">
+            <source src="/img/STAY _ Interstellar [4K].mp4" type="video/mp4" />
+          </video>
+
           <div class="movie-detail">
+            <p class="movie-name">Interstellar</p>
             <p class="detail">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
               nulla quos totam iusto velit, delectus a quod facere quisquam
@@ -63,7 +67,19 @@
               delectus a quod facere quisquam suscipit deleniti corrupti
               sapiente.
             </p>
-            <button class="movie-watch-btn">WATCH</button>
+          </div>
+
+          <div class="video-controllers">
+            <i
+              class="fa-solid fa-play"
+              id="play-btn"
+              onclick="playVideo();"
+            ></i>
+            <i
+              class="fa-solid fa-volume-xmark"
+              id="sound-btn"
+              onclick="muteVideo();"
+            ></i>
           </div>
         </div>
 
@@ -80,25 +96,25 @@
               <img src="/img/1.jpeg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/12.jpg" alt="" />
+              <img src="/img/2.jpeg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/10.jpg" alt="" />
+              <img src="/img/3.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/14.jpg" alt="" />
+              <img src="/img/4.jpg" alt="" />
             </div>
             <div class="slide">
               <img src="/img/1.jpeg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/12.jpg" alt="" />
+              <img src="/img/2.jpeg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/10.jpg" alt="" />
+              <img src="/img/3.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/14.jpg" alt="" />
+              <img src="/img/4.jpg" alt="" />
             </div>
           </div>
           <i
@@ -134,10 +150,16 @@
           <p class="slider-title">new movies</p>
           <div class="slider-list" id="second-slider">
             <div class="slide">
-              <img src="/img/3.jpg" alt="" />
+              <img src="/img/5.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/4.jpg" alt="" />
+              <img src="/img/6.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/7.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/8.jpg" alt="" />
             </div>
             <div class="slide">
               <img src="/img/5.jpg" alt="" />
@@ -146,16 +168,10 @@
               <img src="/img/6.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/3.jpg" alt="" />
+              <img src="/img/7.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/4.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="/img/5.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="/img/6.jpg" alt="" />
+              <img src="/img/8.jpg" alt="" />
             </div>
           </div>
           <i
@@ -190,28 +206,28 @@
           <p class="slider-title">new movies</p>
           <div class="slider-list" id="thirt-slider">
             <div class="slide">
-              <img src="/img/3.jpg" alt="" />
+              <img src="/img/9.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/4.jpg" alt="" />
+              <img src="/img/10.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/5.jpg" alt="" />
+              <img src="/img/11.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/6.jpg" alt="" />
+              <img src="/img/12.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/3.jpg" alt="" />
+              <img src="/img/9.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/4.jpg" alt="" />
+              <img src="/img/10.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/5.jpg" alt="" />
+              <img src="/img/11.jpg" alt="" />
             </div>
             <div class="slide">
-              <img src="/img/6.jpg" alt="" />
+              <img src="/img/12.jpg" alt="" />
             </div>
           </div>
           <i
@@ -222,7 +238,26 @@
         </div>
       </div>
     </main>
-    <footer>footer</footer>
+    <footer>
+      <div class="social-media">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <div class="links">
+        <p>Home</p>
+        <p>Movies</p>
+        <p>Series</p>
+        <p>Popular</p>
+        <p>Trends</p>
+      </div>
+      <p class="copy-right">
+        Movie website design tutorial by using HTML, pure CSS, and Vanilla JS.
+        Designed by Lama Dev for Youtube. © 2021
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,10 +1,43 @@
 footer {
   width: calc(100% - 50px);
   margin-left: 50px;
-  height: 150px;
+  height: 200px;
   border-radius: 15px;
-
   background-color: #4fbd02;
-
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.social-media {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.social-media i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.links {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: large;
+}
+footer .copy-right {
+  width: 95%;
+  padding: 10px;
+  border-top: 1px solid #327403;
+  text-align: center;
 }

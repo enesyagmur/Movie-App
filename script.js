@@ -11,6 +11,7 @@ const changeModeFunc = () => {
   }
 };
 
+//SLIDER
 let slider1 = document.querySelector("#first-slider");
 let slider2 = document.querySelector("#second-slider");
 let slider3 = document.querySelector("#thirt-slider");
@@ -80,5 +81,31 @@ const scrollToLeft = (slider) => {
       left: -450,
       behavior: "smooth",
     });
+  }
+};
+
+//VIDEO
+
+let video = document.querySelector(".video");
+let playButton = document.querySelector("#play-btn");
+let soundButton = document.querySelector("#sound-btn");
+
+const playVideo = () => {
+  if (video.paused) {
+    video.play();
+    playButton.className = "fa-solid fa-stop";
+  } else {
+    video.pause();
+    playButton.className = "fa-solid fa-play";
+  }
+};
+
+const muteVideo = () => {
+  if (video.muted === false) {
+    video.muted = true;
+    soundButton.className = "fa-solid fa-volume-high";
+  } else if (video.muted === true) {
+    video.muted = false;
+    soundButton.className = "fa-solid fa-volume-xmark";
   }
 };

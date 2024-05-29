@@ -1,32 +1,44 @@
 .main-top {
   width: 100%;
-  height: 450px;
-  background-image: linear-gradient(darkred, #151515);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 550px;
   color: #d6d6d6;
+  border-radius: 15px;
+  position: relative;
 }
-.main-top .movie-name {
-  width: 50%;
+video {
+  position: absolute;
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 15px;
+}
+.main-top img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.movie-detail .movie-name {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 120px;
+  font-size: 100px;
   font-weight: bold;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-decoration: underline;
-  color: darkred;
   margin-top: -70px;
+  text-transform: uppercase;
 }
 .main-top .movie-detail {
+  position: absolute;
   width: 50%;
   height: 100%;
+  top: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-left: 140px;
 }
 .movie-detail .detail {
   width: 70%;
@@ -46,4 +58,25 @@
   font-size: 18px;
   cursor: pointer;
   margin-top: 20px;
+}
+.main-top .video-controllers {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.video-controllers i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
 }
