@@ -1,0 +1,10 @@
+footer {
+  width: calc(100% - 50px);
+  margin-left: 50px;
+  height: 150px;
+  border-radius: 15px;
+
+  background-color: #4fbd02;
+
+  margin-top: 30px;
+}

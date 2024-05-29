@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/mainTop.css" />
     <link rel="stylesheet" href="/styles/sidebar.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
+    <link rel="stylesheet" href="/styles/single-movie.css" />
 
     <link
       rel="stylesheet"
@@ -66,14 +67,15 @@
           </div>
         </div>
 
+        <!-- 1. SLIDER------------------------------------------------------------------------------------------>
         <div class="slider">
           <i
             class="fa-solid fa-chevron-left"
             id="left-btn"
-            onclick="scrollToLeft();"
+            onclick="scrollToLeft(`first-slider`);"
           ></i>
-          <p class="slider-title">new release</p>
-          <div class="slider-list">
+          <p class="slider-title">recent trends</p>
+          <div class="slider-list" id="first-slider">
             <div class="slide">
               <img src="/img/1.jpeg" alt="" />
             </div>
@@ -102,7 +104,120 @@
           <i
             class="fa-solid fa-chevron-right"
             id="right-btn"
-            onclick="scrollToRight();"
+            onclick="scrollToRight(`first-slider`);"
+          ></i>
+        </div>
+
+        <!-- 1. MOVIE------------------------------------------------------------------------------------------>
+        <div class="single-movie">
+          <img src="/img/f-2.jpg" class="movie-bg" alt="" />
+          <img src="/img/f-t-2.png" alt="" class="title" />
+          <p class="detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fuga
+            inventore maiores laudantium mollitia voluptatum necessitatibus
+            consequuntur distinctio, obcaecati ut quo fugiat, sapiente saepe
+            omnis commodi rerum deleniti quod aspernatur minima error vero
+            laborum. Quia recusandae magni facilis voluptates deserunt non
+            laudantium possimus, earum ullam vitae doloribus quidem rem
+            necessitatibus?
+          </p>
+          <button>WATCH</button>
+        </div>
+
+        <!-- 2. SLIDER------------------------------------------------------------------------------------------>
+        <div class="slider">
+          <i
+            class="fa-solid fa-chevron-left"
+            id="left-btn"
+            onclick="scrollToLeft(`second-slider`);"
+          ></i>
+          <p class="slider-title">new movies</p>
+          <div class="slider-list" id="second-slider">
+            <div class="slide">
+              <img src="/img/3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/4.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/5.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/6.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/4.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/5.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/6.jpg" alt="" />
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-chevron-right"
+            id="right-btn"
+            onclick="scrollToRight(`second-slider`);"
+          ></i>
+        </div>
+
+        <!-- 2. MOVIE------------------------------------------------------------------------------------------>
+        <div class="single-movie">
+          <img src="/img/f-1.jpg" class="movie-bg" alt="" />
+          <img src="/img/f-t-1.png" alt="" class="title" />
+          <p class="detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fuga
+            inventore maiores laudantium mollitia voluptatum necessitatibus
+            consequuntur distinctio, obcaecati ut quo fugiat, sapiente saepe
+            omnis commodi rerum deleniti quod aspernatur minima error vero
+            laborum. Quia recusandae magni facilis voluptates deserunt non
+            laudantium possimus, earum ullam vitae doloribus quidem rem
+            necessitatibus?
+          </p>
+          <button>WATCH</button>
+        </div>
+        <!-- 3. SLIDER------------------------------------------------------------------------------------------>
+        <div class="slider">
+          <i
+            class="fa-solid fa-chevron-left"
+            id="left-btn"
+            onclick="scrollToLeft(`thirt-slider`);"
+          ></i>
+          <p class="slider-title">new movies</p>
+          <div class="slider-list" id="thirt-slider">
+            <div class="slide">
+              <img src="/img/3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/4.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/5.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/6.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/4.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/5.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/6.jpg" alt="" />
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-chevron-right"
+            id="right-btn"
+            onclick="scrollToRight(`thirt-slider`);"
           ></i>
         </div>
       </div>
@@ -111,4 +226,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-// slider yapmaya çalışıyorum

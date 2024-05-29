@@ -32,6 +32,8 @@
   width: 70%;
   line-height: 25px;
   word-spacing: 2px;
+  font-weight: 400;
+  font-size: large;
 }
 .movie-detail button {
   width: 120px;

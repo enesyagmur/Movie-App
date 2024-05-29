@@ -1,0 +1,49 @@
+.single-movie {
+  width: 98%;
+  height: 550px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+.single-movie .movie-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+}
+.single-movie .title {
+  top: 10%;
+  left: 5%;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+}
+.single-movie .detail {
+  position: relative;
+  top: 35%;
+  left: 5%;
+  width: 50%;
+  line-height: 25px;
+  word-spacing: 2px;
+  font-weight: 400;
+  font-size: large;
+}
+.single-movie button {
+  position: relative;
+  top: 37%;
+  left: 5%;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4fbd02;
+  font-weight: bold;
+  color: #d6d6d6;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
