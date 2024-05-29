@@ -10,3 +10,31 @@ const changeModeFunc = () => {
     document.body.classList.add("light");
   }
 };
+
+let sliderList = document.querySelector(".slider-list");
+
+const scrollToRight = () => {
+  if (sliderList.scrollLeft === 1682) {
+    sliderList.scrollBy({
+      top: 0,
+      left: -1682,
+      behavior: "smooth",
+    });
+  } else {
+    sliderList.scrollBy({
+      top: 0,
+      left: 450,
+      behavior: "smooth",
+    });
+  }
+};
+
+const scrollToLeft = () => {
+  if (sliderList.scrollLeft > 0) {
+    sliderList.scrollBy({
+      top: 0,
+      left: -450,
+      behavior: "smooth",
+    });
+  }
+};

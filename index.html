@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/mainTop.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link rel="stylesheet" href="/styles/slider.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -61,10 +65,50 @@
             <button class="movie-watch-btn">WATCH</button>
           </div>
         </div>
-        <div class="slider">slider</div>
+
+        <div class="slider">
+          <i
+            class="fa-solid fa-chevron-left"
+            id="left-btn"
+            onclick="scrollToLeft();"
+          ></i>
+          <p class="slider-title">new release</p>
+          <div class="slider-list">
+            <div class="slide">
+              <img src="/img/1.jpeg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/12.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/10.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/14.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/1.jpeg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/12.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/10.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/img/14.jpg" alt="" />
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-chevron-right"
+            id="right-btn"
+            onclick="scrollToRight();"
+          ></i>
+        </div>
       </div>
     </main>
     <footer>footer</footer>
     <script src="script.js"></script>
   </body>
 </html>
+// slider yapmaya çalışıyorum
