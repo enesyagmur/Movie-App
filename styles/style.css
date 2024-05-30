@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +16,7 @@ body {
   transition: all 0.5s;
   background-color: #151515;
   color: #d6d6d6;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body.light {

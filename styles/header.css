@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+
 header {
   width: 95%;
   height: 70px;
@@ -16,6 +18,7 @@ header {
   font-size: xx-large;
   font-weight: bold;
   width: 200px;
+  font-family: "sen";
 }
 i {
   font-size: 20px;
