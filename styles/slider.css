@@ -1,9 +1,10 @@
 .slider {
   display: flex;
-  width: 98%;
+  width: 99%;
   flex-direction: column;
   margin: auto;
   position: relative;
+  margin-bottom: 30px;
 }
 .slider-title {
   height: 100px;

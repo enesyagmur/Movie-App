@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/mainTop.css" />
+    <link rel="stylesheet" href="/styles/single-content.css" />
     <link rel="stylesheet" href="/styles/sidebar.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
     <link rel="stylesheet" href="/styles/single-movie.css" />
@@ -52,14 +52,19 @@
         </div>
       </div>
       <div class="main-right">
-        <div class="main-top">
-          <video class="video" poster="/img/interstaller.jpg">
+        <!-- 1. SINGLE CONTENT------------------------------------------------------------------------------------------>
+        <div class="single-content">
+          <video
+            class="video"
+            id="interstallerVideo"
+            poster="/img/interstellar2.jpg"
+          >
             <source src="/img/STAY _ Interstellar [4K].mp4" type="video/mp4" />
           </video>
 
-          <div class="movie-detail">
-            <p class="movie-name">Interstellar</p>
-            <p class="detail">
+          <div class="detail" id="interstaller-detail">
+            <p class="name">Interstellar</p>
+            <p class="explanation">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
               nulla quos totam iusto velit, delectus a quod facere quisquam
               suscipit deleniti corrupti sapiente.Lorem ipsum dolor sit amet
@@ -72,13 +77,13 @@
           <div class="video-controllers">
             <i
               class="fa-solid fa-play"
-              id="play-btn"
-              onclick="playVideo();"
+              id="interstaller-play-btn"
+              onclick="videoPlay(`interstaller`);"
             ></i>
             <i
               class="fa-solid fa-volume-xmark"
-              id="sound-btn"
-              onclick="muteVideo();"
+              id="interstaller-sound-btn"
+              onclick="videoMute(`interstaller`);"
             ></i>
           </div>
         </div>
@@ -124,20 +129,39 @@
           ></i>
         </div>
 
-        <!-- 1. MOVIE------------------------------------------------------------------------------------------>
-        <div class="single-movie">
-          <img src="/img/f-2.jpg" class="movie-bg" alt="" />
-          <img src="/img/f-t-2.png" alt="" class="title" />
-          <p class="detail">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fuga
-            inventore maiores laudantium mollitia voluptatum necessitatibus
-            consequuntur distinctio, obcaecati ut quo fugiat, sapiente saepe
-            omnis commodi rerum deleniti quod aspernatur minima error vero
-            laborum. Quia recusandae magni facilis voluptates deserunt non
-            laudantium possimus, earum ullam vitae doloribus quidem rem
-            necessitatibus?
-          </p>
-          <button>WATCH</button>
+        <!-- 2. SINGLE CONTENT------------------------------------------------------------------------------------------>
+        <div class="single-content">
+          <video class="video" id="darkVideo" poster="/img/dark.jpg">
+            <source
+              src="/img/DARK Season 2 _ Epic Confrontation Teaser _ Netflix.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="detail" id="dark-detail">
+            <p class="name">dark</p>
+            <p class="explanation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              nulla quos totam iusto velit, delectus a quod facere quisquam
+              suscipit deleniti corrupti sapiente.Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Fugiat nulla quos totam iusto velit,
+              delectus a quod facere quisquam suscipit deleniti corrupti
+              sapiente.
+            </p>
+          </div>
+
+          <div class="video-controllers">
+            <i
+              class="fa-solid fa-play"
+              id="dark-play-btn"
+              onclick="videoPlay(`dark`);"
+            ></i>
+            <i
+              class="fa-solid fa-volume-xmark"
+              id="dark-sound-btn"
+              onclick="videoMute(`dark`);"
+            ></i>
+          </div>
         </div>
 
         <!-- 2. SLIDER------------------------------------------------------------------------------------------>
@@ -181,20 +205,36 @@
           ></i>
         </div>
 
-        <!-- 2. MOVIE------------------------------------------------------------------------------------------>
-        <div class="single-movie">
-          <img src="/img/f-1.jpg" class="movie-bg" alt="" />
-          <img src="/img/f-t-1.png" alt="" class="title" />
-          <p class="detail">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fuga
-            inventore maiores laudantium mollitia voluptatum necessitatibus
-            consequuntur distinctio, obcaecati ut quo fugiat, sapiente saepe
-            omnis commodi rerum deleniti quod aspernatur minima error vero
-            laborum. Quia recusandae magni facilis voluptates deserunt non
-            laudantium possimus, earum ullam vitae doloribus quidem rem
-            necessitatibus?
-          </p>
-          <button>WATCH</button>
+        <!-- 3. SINGLE CONTENT------------------------------------------------------------------------------------------>
+        <div class="single-content">
+          <video class="video" id="djangoVideo" poster="/img/django.jpg">
+            <source src="/img/Django Unchained - Edit.mp4" type="video/mp4" />
+          </video>
+
+          <div class="detail" id="django-detail">
+            <p class="name">django</p>
+            <p class="explanation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              nulla quos totam iusto velit, delectus a quod facere quisquam
+              suscipit deleniti corrupti sapiente.Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Fugiat nulla quos totam iusto velit,
+              delectus a quod facere quisquam suscipit deleniti corrupti
+              sapiente.
+            </p>
+          </div>
+
+          <div class="video-controllers">
+            <i
+              class="fa-solid fa-play"
+              id="dark-play-btn"
+              onclick="videoPlay(`django`);"
+            ></i>
+            <i
+              class="fa-solid fa-volume-xmark"
+              id="dark-sound-btn"
+              onclick="videoMute(`django`);"
+            ></i>
+          </div>
         </div>
         <!-- 3. SLIDER------------------------------------------------------------------------------------------>
         <div class="slider">
@@ -261,3 +301,9 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<!---------- yapılacaklar
+ sliderlarda başa dönme özelliği bozulmuş 
+ sliderların üstüne gelince detayçıkması 
+ font import etme    
+ -->
