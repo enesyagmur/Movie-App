@@ -46,7 +46,3 @@ const scrollToLeft = (slider) => {
     });
   }
 };
-
-// 20 tl filmi çekebildim ama tam olarak istediğim veriyi çekebilmiş değilim
-// dark mode çalışmıyor
-// 3. videonun iconları değişmiyor

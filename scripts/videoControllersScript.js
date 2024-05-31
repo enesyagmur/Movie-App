@@ -84,10 +84,16 @@ const djangoVideoMute = () => {
 const videoPlay = (video) => {
   if (video === "interstaller") {
     interstallerVideoPlay();
+    darkVideo.pause();
+    djangoVideo.pause();
   } else if (video === "dark") {
     darkVideoPlay();
+    interstallerVideo.pause();
+    djangoVideo.pause();
   } else if (video === "django") {
     djangoVideoPlay();
+    interstallerVideo.pause();
+    darkVideo.pause();
   }
 };
 
