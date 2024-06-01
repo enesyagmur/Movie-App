@@ -8,93 +8,68 @@ const documentaryUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${ap
 const populerSeriesUrl = `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&language=tr-TR&page=1`;
 const populerMoviessUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=tr&page=1`;
 
-fetch(populerMoviessUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    data.results.map((movie) => {
-      if (movie.overview) {
+async function takeDataAndWrite(url, slider) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP hatası! durum:${response.status}`);
+    }
+    const data = await response.json();
+
+    data.results.forEach((element) => {
+      if (element.overview) {
         //tanımlamalar
         const slide = document.createElement("div");
         slide.className = "slide";
-        slide.setAttribute("key", movie.id);
+        slide.setAttribute("key", element.id);
 
         const img = document.createElement("img");
-        img.src = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
-        img.alt = movie.title;
+        img.src = `https://image.tmdb.org/t/p/w500${element.backdrop_path}`;
+        img.alt = element.title;
 
         const slideDetail = document.createElement("div");
         slideDetail.className = "slide-detail";
 
         const name = document.createElement("p");
         name.className = "name";
-        name.textContent = movie.title;
+        name.textContent = element.title;
 
         const detail = document.createElement("p");
         detail.className = "detail";
-        detail.textContent = movie.overview;
+        detail.textContent = element.overview;
 
         //soy ağacı
 
-        movieSlide.appendChild(slide);
+        slider.appendChild(slide);
         slide.appendChild(img);
         slide.append(slideDetail);
         slideDetail.appendChild(name);
         slideDetail.appendChild(detail);
       }
     });
-  })
-  .catch((err) => console.error(err));
+  } catch (err) {
+    console.error("fetch işleminde hata", err);
+  }
+}
 
-fetch(populerSeriesUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    data.results.map((serie) => {
-      if (serie.overview) {
-        serieSlide.innerHTML += `<div class="slide" key=${serie.id}>
-      <img src="https://image.tmdb.org/t/p/w500${serie.backdrop_path}" alt="" />
-      <div class="slide-detail">
-        <p class="name">${serie.name}</p>
-        <p class="detail">
-         ${serie.overview}
-        </p>
-      </div>
-    </div>`;
-      }
-    });
-  })
-  .catch((err) => console.error(err));
+takeDataAndWrite(populerMoviessUrl, movieSlide);
+takeDataAndWrite(populerSeriesUrl, serieSlide);
 
+//farklı veri çekme ve yazdırma yöntemi
 fetch(documentaryUrl)
   .then((response) => response.json())
   .then((data) => {
-    data.results.forEach((documentary) => {
-      if (documentary.overview) {
-        //tanımlamalar----
-        const slide = document.createElement("div");
-        slide.className = "slide";
-        slide.setAttribute("key", documentary.id);
-
-        const img = document.createElement("img");
-        img.src = `https://image.tmdb.org/t/p/w500${documentary.backdrop_path}`;
-        img.alt = documentary.title;
-
-        const slideDetail = document.createElement("div");
-        slideDetail.className = "slide-detail";
-
-        const name = document.createElement("p");
-        name.className = "name";
-        name.textContent = documentary.title;
-
-        const detail = document.createElement("p");
-        detail.className = "detail";
-        detail.textContent = documentary.overview;
-
-        //soy ağacı oluşturma :D
-        documentarySlide.appendChild(slide);
-        slide.appendChild(img);
-        slide.appendChild(slideDetail);
-        slideDetail.appendChild(name);
-        slideDetail.appendChild(detail);
+    data.results.map((element) => {
+      if (element.overview) {
+        documentarySlide.innerHTML += `<div class="slide" key=${element.id}>
+      <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="" />
+      <div class="slide-detail">
+        <p class="name">${element.name}</p>
+        <p class="detail">
+         ${element.overview}
+        </p>
+      </div>
+    </div>`;
       }
     });
   })
