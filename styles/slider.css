@@ -35,10 +35,10 @@
 .slider i:hover {
   opacity: 1;
 }
-.slider #left-btn {
+.slider .fa-chevron-left {
   left: 15px;
 }
-.slider #right-btn {
+.slider .fa-chevron-right {
   right: 45px;
 }
 

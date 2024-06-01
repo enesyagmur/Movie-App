@@ -1,6 +1,6 @@
-let moviesSlider = document.querySelector("#movies-slider");
-let seriesSlider = document.querySelector("#series-slider");
-let documentarySlider = document.querySelector("#documentary-slider");
+let movieSlide = document.querySelector("#movies-slider");
+let serieSlide = document.querySelector("#series-slider");
+let documentarySlide = document.querySelector("#documentary-slider");
 
 const apiKey = "28e89d863e28cef1a0f8056f0c27867a";
 
@@ -13,7 +13,7 @@ fetch(populerMoviessUrl)
   .then((data) => {
     data.results.map((movie) => {
       if (movie.overview) {
-        moviesSlider.innerHTML += `<div class="slide" key=${movie.id}>
+        movieSlide.innerHTML += `<div class="slide" key=${movie.id}>
       <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="" />
       <div class="slide-detail">
         <p class="name">${movie.title}</p>
@@ -32,7 +32,7 @@ fetch(populerSeriesUrl)
   .then((data) => {
     data.results.map((serie) => {
       if (serie.overview) {
-        seriesSlider.innerHTML += `<div class="slide" key=${serie.id}>
+        serieSlide.innerHTML += `<div class="slide" key=${serie.id}>
       <img src="https://image.tmdb.org/t/p/w500${serie.backdrop_path}" alt="" />
       <div class="slide-detail">
         <p class="name">${serie.name}</p>
@@ -51,7 +51,7 @@ fetch(documentaryUrl)
   .then((data) => {
     data.results.map((documentary) => {
       if (documentary.overview) {
-        documentarySlider.innerHTML += `<div class="slide" key=${documentary.id}>
+        documentarySlide.innerHTML += `<div class="slide" key=${documentary.id}>
         <img src="https://image.tmdb.org/t/p/w500${documentary.backdrop_path}" alt="" />
         <div class="slide-detail">
           <p class="name">${documentary.title}</p>
