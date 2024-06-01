@@ -23,3 +23,21 @@ body.light {
   background-color: #d6d6d6;
   color: #151515;
 }
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
