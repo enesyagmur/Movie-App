@@ -68,15 +68,19 @@ header .links p:hover {
   color: greenyellow;
 }
 
-#mode-button {
+#mode-btn {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: black;
-  right: 0;
   border: none;
   transition: all 0.5s;
+  right: 0;
+}
+
+.left {
+  left: 0;
 }
 
 #open-menu-btn {
@@ -106,6 +110,8 @@ header .links p:hover {
   header {
     position: relative;
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   header .logo {
     display: none;

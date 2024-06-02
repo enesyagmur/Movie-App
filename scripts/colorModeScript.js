@@ -1,7 +1,12 @@
-let body = document.body;
-let modeButton = document.querySelector("#mode-button");
+let modeButton = document.querySelector("#mode-btn");
 
 const modeChangeFunc = () => {
+  if (!modeButton.className) {
+    modeButton.classList.add("left");
+  } else {
+    modeButton.classList.remove("left");
+  }
+
   const root = document.documentElement;
 
   const currentModeColor = getComputedStyle(root)
