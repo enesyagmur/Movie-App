@@ -8,8 +8,8 @@
 }
 video {
   position: absolute;
-  min-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   margin: auto;
   border-radius: 15px;
@@ -19,22 +19,9 @@ video {
   height: 100%;
   object-fit: cover;
 }
-.detail .name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 100px;
-  font-weight: bold;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-decoration: underline;
-  margin-top: -70px;
-  text-transform: uppercase;
-  color: #4fbd02;
-}
 .single-content .detail {
   position: absolute;
-  width: 50%;
-  height: 100%;
+  height: 70%;
   top: 10%;
   display: flex;
   flex-direction: column;
@@ -42,22 +29,39 @@ video {
   justify-content: center;
   padding-left: 140px;
 }
+.detail .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: underline;
+  margin-top: -70px;
+  text-transform: uppercase;
+  color: #4fbd02;
+}
+
 .detail .explanation {
-  width: 70%;
+  width: 100%;
   line-height: 25px;
   word-spacing: 2px;
   font-weight: 400;
   font-size: large;
+  max-width: 600px;
+  color: #d6d6d6;
 }
 .single-content .video-controllers {
   width: 120px;
   height: 70px;
-  position: absolute;
+  position: relative;
   top: 85%;
-  right: 5%;
+  left: calc(100% - 150px);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  z-index: 99;
 }
 .video-controllers i {
   display: flex;
@@ -69,4 +73,23 @@ video {
   color: white;
   border: 1px solid white;
   cursor: pointer;
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  .single-content .detail {
+    padding-left: 50px;
+  }
+  .detail .name {
+    font-size: 40px;
+  }
+  .detail .explanation {
+    font-size: 16px;
+    width: 60%;
+    line-height: 20px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 2px #151515;
+  }
+  .video-controllers {
+    left: 20%;
+  }
 }

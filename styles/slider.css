@@ -51,6 +51,8 @@
   transition: all 0.5s;
   cursor: pointer;
   position: relative;
+  border-radius: 20px;
+  color: #d6d6d6;
 }
 .slide:hover {
   min-width: 500px;
@@ -79,6 +81,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
   transition: all 0.5s;
+  border-radius: 20px;
 }
 .slide-detail .detail {
   height: 120px;

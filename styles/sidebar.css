@@ -1,5 +1,5 @@
 .sidebar {
-  min-width: 70px;
+  width: 70px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,4 +16,10 @@
 .icon-list i {
   margin-top: 55px;
   margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
 }
