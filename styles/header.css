@@ -116,7 +116,7 @@ header .links p:hover {
     flex-direction: column;
     width: 100%;
     height: 150px;
-    top: 70px;
+    top: 50px;
     z-index: 99;
     background-color: var(--bgColor);
     color: var(--fontColor);
@@ -129,6 +129,13 @@ header .links p:hover {
     height: 30px;
   }
   #open-menu-btn {
+    display: flex;
+  }
+
+  #open-menu-btn:hover ~ .links {
+    display: flex;
+  }
+  .links:hover {
     display: flex;
   }
 }
