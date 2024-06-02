@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bgColor: #151515;
+  --fontColor: #d6d6d6;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -14,8 +19,8 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   transition: all 0.5s;
-  background-color: #151515;
-  color: #d6d6d6;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
   font-family: "Roboto", sans-serif;
 }
 

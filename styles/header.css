@@ -2,17 +2,12 @@
 
 header {
   width: 95%;
-  height: 70px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header-left {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+
 .logo {
   color: #4fbd02;
   font-size: xx-large;
@@ -25,17 +20,22 @@ i {
   font-size: 20px;
 }
 .links {
-  width: 600px;
+  width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-weight: bold;
   font-size: large;
+  cursor: pointer;
+}
+header .links p:hover {
+  background-color: var(--fontColor);
+  color: var(--bgColor);
 }
 
 .header-right {
-  width: 50%;
+  width: 200px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@ i {
   border-radius: 50%;
   margin-right: 20px;
 }
-.mode {
+.header-right .mode {
   width: 65px;
   height: 30px;
   display: flex;
@@ -79,12 +79,56 @@ i {
   transition: all 0.5s;
 }
 
-.left {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: black;
-  left: 0;
-  border: none;
+#open-menu-btn {
+  font-size: xx-large;
+  cursor: pointer;
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  header {
+    width: 100%;
+    flex-direction: flex;
+    justify-content: space-between;
+  }
+  header .links {
+    width: 400px;
+    flex-direction: flex;
+    height: 100px;
+    justify-content: space-evenly;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 599px) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  header .logo {
+    display: none;
+  }
+  header .links {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    top: 70px;
+    z-index: 99;
+    background-color: var(--bgColor);
+    color: var(--fontColor);
+  }
+  .links p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+  }
+  #open-menu-btn {
+    display: flex;
+  }
 }
