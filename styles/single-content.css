@@ -50,6 +50,7 @@ video {
   font-size: large;
   max-width: 600px;
   color: #d6d6d6;
+  text-shadow: 2px 2px 2px #151515;
 }
 .single-content .video-controllers {
   width: 120px;
@@ -86,10 +87,23 @@ video {
     font-size: 16px;
     width: 60%;
     line-height: 20px;
-    margin-top: 10px;
-    text-shadow: 2px 2px 2px #151515;
   }
   .video-controllers {
     left: 20%;
+  }
+}
+
+@media (max-width: 499px) {
+  .single-content .detail {
+    padding-left: 10px;
+  }
+  .detail .name {
+    font-size: 30px;
+  }
+  .detail .explanation {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 10px;
+    width: 90%;
   }
 }

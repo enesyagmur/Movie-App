@@ -32,7 +32,11 @@ async function takeDataAndWrite(url, slider) {
 
         const name = document.createElement("p");
         name.className = "name";
-        name.textContent = element.title;
+        if (slider === movieSlide) {
+          name.textContent = element.title;
+        } else {
+          name.textContent = element.name;
+        }
 
         const detail = document.createElement("p");
         detail.className = "detail";

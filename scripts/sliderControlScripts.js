@@ -8,7 +8,7 @@ const scrollToRight = (slider) => {
   if (slider === "movies-slider") {
     moviesSlider.scrollBy({
       top: 0,
-      left: 550,
+      left: 50,
       behavior: "smooth",
     });
   } else if (slider === "series-slider") {

@@ -99,3 +99,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 900px) {
+  .slider-list {
+    overflow-x: scroll;
+  }
+  .slider i {
+    display: none;
+  }
+}

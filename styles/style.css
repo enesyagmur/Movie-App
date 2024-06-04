@@ -22,6 +22,7 @@ body {
   background-color: var(--bgColor);
   color: var(--fontColor);
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 body.light {
