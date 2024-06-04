@@ -1,0 +1,65 @@
+.search-bar {
+  width: 99%;
+  min-height: 50px;
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  flex-direction: column;
+}
+.search-bar input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  padding-left: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.search-bar i {
+  color: #4fbd02;
+  position: absolute;
+  right: 1%;
+  font-size: x-large;
+  cursor: pointer;
+}
+.search-list {
+  min-height: 300px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.search-list .found {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.found img {
+  max-width: 50%;
+  max-height: 100%;
+  background-size: cover;
+}
+.found .detail {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.found .detail .name {
+  margin-top: 10px;
+  font-size: 30px;
+}
+.found .detail .explanation {
+  font-size: 15px;
+  width: 90%;
+}

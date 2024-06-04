@@ -29,6 +29,14 @@ i {
   font-size: large;
   cursor: pointer;
 }
+.links p {
+  height: 100%;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
 header .links p:hover {
   background-color: var(--fontColor);
   color: var(--bgColor);

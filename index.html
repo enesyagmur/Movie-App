@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/styles/single-content.css" />
     <link rel="stylesheet" href="/styles/sidebar.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
-    <link rel="stylesheet" href="/styles/single-movie.css" />
+    <link rel="stylesheet" href="/styles/search-bar.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -41,7 +42,11 @@
     <main>
       <div class="sidebar">
         <div class="icon-list">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            id="open-search-button"
+            onclick="openSearchFunc();"
+          ></i>
           <i class="fa-solid fa-house-chimney"></i>
           <i class="fa-solid fa-user-group"></i>
           <i class="fa-solid fa-bookmark"></i>
@@ -49,7 +54,17 @@
           <i class="fa-solid fa-desktop"></i>
         </div>
       </div>
+
       <div class="main-right">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="Search" />
+          <i
+            class="fa-solid fa-magnifying-glass"
+            id="search-button"
+            onclick="searchFunc();"
+          ></i>
+          <div class="search-list"></div>
+        </div>
         <!-- 1. SINGLE CONTENT------------------------------------------------------------------------------------------>
         <div class="single-content">
           <video
@@ -202,12 +217,10 @@
     <script src="scripts/sliderControlScripts.js"></script>
     <script src="scripts/videoControllersScript.js"></script>
     <script src="scripts/colorModeScript.js"></script>
+    <script src="scripts/searchScript.js"></script>
   </body>
 </html>
 
 <!---------- yapılacaklar
- 
-
- - başkka ne gibi özelliklerin getirilebileceğini örnek projelerden  bulabilirim
-
+ -search-bar list i arama butonuna tıklayınca göstersin özelliği eklenmeli
  -->

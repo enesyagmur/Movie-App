@@ -8,6 +8,8 @@ main {
 .main-right {
   max-width: calc(100% - 100px);
   height: 100%;
+  position: relative;
+  flex-direction: column;
 }
 
 @media (max-width: 900px) {
