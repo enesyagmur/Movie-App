@@ -12,11 +12,14 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  padding-top: 10px;
 }
 .icon-list i {
   margin-bottom: 55px;
   margin-left: 10px;
+}
+.fa-xmark {
+  font-size: 30px;
+  color: #ee1d25;
 }
 
 @media (max-width: 900px) {

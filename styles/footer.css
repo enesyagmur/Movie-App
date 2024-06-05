@@ -25,6 +25,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   margin: 5px;
 }
 .links {

@@ -62,7 +62,7 @@ video {
   align-items: center;
   justify-content: space-evenly;
 
-  z-index: 99;
+  z-index: 96;
 }
 .video-controllers i {
   display: flex;

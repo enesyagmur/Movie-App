@@ -1,25 +1,33 @@
 const searchBar = document.querySelector(".search-bar");
+const openSearchButton = document.querySelector("#open-search-button");
+let textbox = document.querySelector(".search-input");
+let searchList = document.querySelector(".search-list");
 
 const openSearchFunc = () => {
+  searchList.innerHTML = "";
+  textbox.value = "";
+  searchList.style.display = "none";
   if (searchBar.style.display === "flex") {
     searchBar.style.display = "none";
+    openSearchButton.classList.remove("fa-xmark");
+    openSearchButton.classList.add("fa-magnifying-glass");
   } else {
     searchBar.style.display = "flex";
+    openSearchButton.classList.remove("fa-magnifying-glass");
+    openSearchButton.classList.add("fa-xmark");
   }
 };
 
 const key = "28e89d863e28cef1a0f8056f0c27867a";
-let textbox = document.querySelector(".search-input");
-let searchList = document.querySelector(".search-list");
 
 const searchFunc = () => {
   searchList.innerHTML = "";
+  searchList.style.display = "flex";
   let query = textbox.value;
   let url = `https://api.themoviedb.org/3/search/multi?api_key=${key}&language=tr-TR&query=${query}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.results);
       data.results.forEach((element) => {
         if (element.overview && element.backdrop_path && element.name) {
           //tanımlamalar
@@ -32,7 +40,7 @@ const searchFunc = () => {
           img.alt = element.title;
 
           const foundDetail = document.createElement("div");
-          foundDetail.className = "detail";
+          foundDetail.className = "found-detail";
 
           const name = document.createElement("p");
           name.className = "name";

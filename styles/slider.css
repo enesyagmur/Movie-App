@@ -31,7 +31,7 @@
   cursor: pointer;
   transition: all 0.5s;
   font-weight: bold;
-  z-index: 99;
+  z-index: 97;
 }
 .slider i:hover {
   opacity: 1;
