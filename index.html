@@ -18,7 +18,7 @@
     />
     <title>Movie App</title>
   </head>
-  <body>
+  <body onclick="searchReset();">
     <header>
       <i class="fa-solid fa-bars" id="open-menu-btn"></i>
       <p class="logo">dreamW<i class="fa-solid fa-earth-americas"></i>rld</p>
@@ -57,12 +57,13 @@
 
       <div class="main-right">
         <div class="search-bar">
-          <input type="text" class="search-input" placeholder="Search" />
-          <i
-            class="fa-solid fa-magnifying-glass"
-            id="search-button"
-            onclick="searchFunc();"
-          ></i>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search"
+            onchange="searchFunc();"
+          />
+
           <div class="search-list"></div>
         </div>
         <!-- 1. SINGLE CONTENT------------------------------------------------------------------------------------------>
@@ -222,5 +223,6 @@
 </html>
 
 <!---------- yapılacaklar
- -search-bar list i arama butonuna tıklayınca göstersin özelliği eklenmeli
+ -searchbar ı küçük ekranlarda standart olarak gösterme
+ -arama ya basıldıgında loading ekranı
  -->

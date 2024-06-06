@@ -19,27 +19,18 @@
   font-size: 15px;
   text-transform: capitalize;
 }
-.search-bar i {
-  color: #4fbd02;
-  position: absolute;
-  right: 1%;
-  font-size: x-large;
-  cursor: pointer;
-  top: 2px;
-}
-.search-list {
-  min-height: 200px;
-  width: 100%;
 
+.search-list {
+  min-height: 1px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  top: 69px;
-  padding-bottom: 40px;
   position: absolute;
-  z-index: 99;
+  z-index: 98;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   margin-right: 2px;
+  margin: 30px;
 }
 .search-list .found {
   width: 100%;
@@ -48,7 +39,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 .found img {
   max-width: 50%;
@@ -74,16 +65,41 @@
   margin-top: 10px;
   text-transform: uppercase;
   color: #4fbd02;
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: bold;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-decoration: underline;
 }
 .found .found-detail .explanation {
-  font-size: 15px;
-  width: 90%;
-  line-height: 25px;
+  font-size: large;
+  width: 100%;
+  line-height: 17px;
   word-spacing: 2px;
   font-weight: 400;
-  font-size: medium;
+}
+
+@media (max-width: 1200px) {
+  .found-detail {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .found .found-detail .explanation {
+    font-size: x-small;
+    line-height: 13px;
+    word-spacing: 1px;
+  }
+  .search-bar {
+    display: flex;
+  }
+  .search-list {
+    background-color: transparent;
+  }
+}
+@media (max-width: 600px) {
+  .found .found-detail .explanation {
+    font-size: xx-small;
+    line-height: 10px;
+  }
 }

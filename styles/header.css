@@ -97,7 +97,7 @@ header .links p:hover {
   display: none;
 }
 
-@media (min-width: 600px) and (max-width: 1199px) {
+@media (min-width: 600px) and (max-width: 1000px) {
   header {
     width: 100%;
     flex-direction: flex;

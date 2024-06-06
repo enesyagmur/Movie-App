@@ -3,9 +3,14 @@ const openSearchButton = document.querySelector("#open-search-button");
 let textbox = document.querySelector(".search-input");
 let searchList = document.querySelector(".search-list");
 
-const openSearchFunc = () => {
+const searchReset = () => {
   searchList.innerHTML = "";
   textbox.value = "";
+};
+
+const openSearchFunc = () => {
+  searchReset();
+
   searchList.style.display = "none";
   if (searchBar.style.display === "flex") {
     searchBar.style.display = "none";
@@ -21,7 +26,6 @@ const openSearchFunc = () => {
 const key = "28e89d863e28cef1a0f8056f0c27867a";
 
 const searchFunc = () => {
-  searchList.innerHTML = "";
   searchList.style.display = "flex";
   let query = textbox.value;
   let url = `https://api.themoviedb.org/3/search/multi?api_key=${key}&language=tr-TR&query=${query}`;
@@ -61,7 +65,6 @@ const searchFunc = () => {
       });
     })
     .catch((err) => console.log(err));
-  textbox.value = "";
-};
 
-searchFunc();
+  searchReset();
+};
