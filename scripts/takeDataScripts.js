@@ -17,6 +17,7 @@ async function takeDataAndWrite(url, slider) {
     const data = await response.json();
 
     data.results.forEach((element) => {
+      console.log(element);
       if (element.overview) {
         //tanımlamalar
         const slide = document.createElement("div");

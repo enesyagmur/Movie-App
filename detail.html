@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detay</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/detail.css" />
+
+    <link
+      rel="shortcut icon"
+      href="/img/movie-camera-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-bars" id="open-menu-btn"></i>
+      <p class="logo">dreamW<i class="fa-solid fa-earth-americas"></i>rld</p>
+      <div class="links">
+        <p onclick="changePage(`index`);">Home</p>
+        <p onclick="changePage(`detail`);">Movies</p>
+        <p>Series</p>
+        <p>Popular</p>
+        <p>Trends</p>
+      </div>
+
+      <div class="header-right">
+        <img src="./img/profile.jpg" alt="" />
+        <div class="mode" onclick="modeChangeFunc();">
+          <i class="fa-solid fa-moon" id="moon-icon"></i>
+          <i class="fa-solid fa-sun" id="sun-icon"></i>
+          <button id="mode-btn"></button>
+        </div>
+      </div>
+    </header>
+    <div class="content-detail">
+      <div class="detail-top">
+        <div class="detail-text">
+          <p class="title">INTERSTELLAR</p>
+          <p class="explation">
+            Genç ve başarılı bir banker olan Andy Dufresne, karısını ve onun
+            sevgilisini öldürmek suçundan ömür boyu hapse mahkum edilir ve
+            Shawshank hapishanesine gönderilir. İşkence, tecavüz, dayak dahil
+            her türlü kötü koşulun hüküm sürdüğü hapishane koşullarında,
+            Andy'nin hayata bağlı ve her daim iyi bir şeyler bulma çabası
+            içindeki hali
+          </p>
+        </div>
+
+        <img src="/img/1.jpeg" alt="" />
+      </div>
+      <div class="detail-bottom">
+        <div class="vote-avarage">
+          <i class="fa-brands fa-gratipay"></i>
+          <p>8.7</p>
+        </div>
+        <div class="vote-count">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <p>15.456</p>
+        </div>
+        <div class="popularity">
+          <i class="fa-solid fa-users"></i>
+          <p>455.126</p>
+        </div>
+        <div class="date">
+          <i class="fa-solid fa-calendar-days"></i>
+          <p>22.05.2005</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="social-media">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <div class="links">
+        <p>Home</p>
+        <p>Movies</p>
+        <p>Series</p>
+        <p>Popular</p>
+        <p>Trends</p>
+      </div>
+      <p class="copy-right">
+        Movie website design tutorial by using HTML, pure CSS, and Vanilla JS.
+        Designed by Lama Dev for Youtube. © 2021
+      </p>
+    </footer>
+    <script src="scripts/takeDataScripts.js"></script>
+    <script src="scripts/changePageScript.js"></script>
+    <script src="scripts/colorModeScript.js"></script>
+  </body>
+</html>

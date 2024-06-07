@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/styles/sidebar.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
     <link rel="stylesheet" href="/styles/search-bar.css" />
+    <link
+      rel="shortcut icon"
+      href="/img/movie-camera-icon.png"
+      type="image/x-icon"
+    />
 
     <link
       rel="stylesheet"
@@ -23,8 +28,8 @@
       <i class="fa-solid fa-bars" id="open-menu-btn"></i>
       <p class="logo">dreamW<i class="fa-solid fa-earth-americas"></i>rld</p>
       <div class="links">
-        <p>Home</p>
-        <p>Movies</p>
+        <p onclick="changePage(`index`);">Home</p>
+        <p onclick="changePage(`detail`);">Movies</p>
         <p>Series</p>
         <p>Popular</p>
         <p>Trends</p>
@@ -219,6 +224,7 @@
     <script src="scripts/videoControllersScript.js"></script>
     <script src="scripts/colorModeScript.js"></script>
     <script src="scripts/searchScript.js"></script>
+    <script src="scripts/changePageScript.js"></script>
   </body>
 </html>
 
