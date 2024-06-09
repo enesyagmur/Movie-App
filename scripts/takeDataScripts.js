@@ -81,24 +81,3 @@ fetch(documentaryUrl)
     });
   })
   .catch((err) => console.error(err));
-
-/*
-   <div class="detail-bottom">
-        <div class="vote-avarage">
-          <i class="fa-brands fa-gratipay"></i>
-          <p>${data.vote_average}</p>
-        </div>
-        <div class="vote-count">
-          <i class="fa-solid fa-square-poll-vertical"></i>
-          <p>${data.vote_count}</p>
-        </div>
-        <div class="popularity">
-          <i class="fa-solid fa-users"></i>
-          <p>${data.popularity}</p>
-        </div>
-        <div class="date">
-          <i class="fa-solid fa-calendar-days"></i>
-          <p>${data.release_date}</p>
-        </div> 
-
-        */

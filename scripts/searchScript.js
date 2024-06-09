@@ -35,6 +35,7 @@ const searchFunc = () => {
       data.results.forEach((element) => {
         if (element.overview && element.backdrop_path && element.name) {
           //tanımlamalar
+          console.log(element);
           const found = document.createElement("div");
           found.className = "found";
           found.setAttribute("key", element.id);
@@ -46,9 +47,10 @@ const searchFunc = () => {
           const foundDetail = document.createElement("div");
           foundDetail.className = "found-detail";
 
-          const name = document.createElement("p");
+          const name = document.createElement("a");
           name.className = "name";
           name.textContent = element.name;
+          name.href = `detail.html?id=${element.id}&category=${element.media_type}`;
 
           const detail = document.createElement("p");
           detail.className = "explanation";
