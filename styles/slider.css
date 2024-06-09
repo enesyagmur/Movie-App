@@ -89,7 +89,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.slide-detail .name {
+.slide-detail a {
   font-size: x-large;
   font-weight: bold;
   text-transform: uppercase;
@@ -98,6 +98,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--fontColor);
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {

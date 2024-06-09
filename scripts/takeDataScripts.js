@@ -17,7 +17,6 @@ async function takeDataAndWrite(url, slider) {
     const data = await response.json();
 
     data.results.forEach((element) => {
-      console.log(element);
       if (element.overview) {
         //tanımlamalar
         const slide = document.createElement("div");
@@ -31,12 +30,15 @@ async function takeDataAndWrite(url, slider) {
         const slideDetail = document.createElement("div");
         slideDetail.className = "slide-detail";
 
-        const name = document.createElement("p");
+        const name = document.createElement("a");
         name.className = "name";
+
         if (slider === movieSlide) {
           name.textContent = element.title;
+          name.href = `detail.html?id=${element.id}&category=movie`;
         } else {
           name.textContent = element.name;
+          name.href = `detail.html?id=${element.id}&category=tv`;
         }
 
         const detail = document.createElement("p");
@@ -66,10 +68,10 @@ fetch(documentaryUrl)
   .then((data) => {
     data.results.map((element) => {
       if (element.overview) {
-        documentarySlide.innerHTML += `<div class="slide" key=${element.id}>
+        documentarySlide.innerHTML += `<div class="slide" key=${element.id} >
       <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="" />
       <div class="slide-detail">
-        <p class="name">${element.name}</p>
+        <a class="name" href="detail.html?id=${element.id}&category=movie">${element.title}</a>
         <p class="detail">
          ${element.overview}
         </p>
@@ -79,3 +81,24 @@ fetch(documentaryUrl)
     });
   })
   .catch((err) => console.error(err));
+
+/*
+   <div class="detail-bottom">
+        <div class="vote-avarage">
+          <i class="fa-brands fa-gratipay"></i>
+          <p>${data.vote_average}</p>
+        </div>
+        <div class="vote-count">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <p>${data.vote_count}</p>
+        </div>
+        <div class="popularity">
+          <i class="fa-solid fa-users"></i>
+          <p>${data.popularity}</p>
+        </div>
+        <div class="date">
+          <i class="fa-solid fa-calendar-days"></i>
+          <p>${data.release_date}</p>
+        </div> 
+
+        */
