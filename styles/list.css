@@ -30,6 +30,7 @@ body footer {
   justify-content: space-between;
   position: relative;
   margin: 20px;
+  z-index: 96;
 }
 .box img {
   width: 100%;
