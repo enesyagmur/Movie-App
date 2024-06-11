@@ -29,15 +29,17 @@ i {
   font-size: large;
   cursor: pointer;
 }
-.links p {
+.links a {
   height: 100%;
   width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s;
+  text-decoration: none;
+  color: var(--fontColor);
 }
-header .links p:hover {
+header .links a:hover {
   background-color: var(--fontColor);
   color: var(--bgColor);
 }

@@ -61,7 +61,7 @@
   border-left: none;
   background-color: var(--bgColor);
 }
-.found .found-detail .name {
+.found .found-detail a {
   margin-top: 10px;
   text-transform: uppercase;
   color: #4fbd02;
@@ -69,6 +69,11 @@
   font-weight: bold;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-decoration: underline;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.found-detail a:hover {
+  color: #ee1d25;
 }
 .found .found-detail .explanation {
   font-size: large;

@@ -100,8 +100,12 @@
   justify-content: center;
   color: var(--fontColor);
   text-decoration: none;
+  transition: all 0.5s;
+  cursor: pointer;
 }
-
+.slide-detail a:hover {
+  color: #ee1d25;
+}
 @media (max-width: 900px) {
   .slider-list {
     overflow-x: scroll;

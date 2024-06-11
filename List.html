@@ -6,10 +6,8 @@
     <title>Detay</title>
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/list.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/detail.css" />
-
     <link
       rel="shortcut icon"
       href="/img/movie-camera-icon.png"
@@ -42,7 +40,7 @@
         </div>
       </div>
     </header>
-    <div class="content-detail"></div>
+    <div class="list"></div>
     <footer>
       <div class="social-media">
         <i class="fa-brands fa-facebook"></i>
@@ -52,11 +50,11 @@
         <i class="fa-brands fa-linkedin"></i>
       </div>
       <div class="links">
-        <p>Home</p>
-        <p>Movies</p>
-        <p>Series</p>
-        <p>Popular</p>
-        <p>Trends</p>
+        <a onclick="changePage(`index`);">Home</a>
+        <a href="List.html?category=movie">Movies</a>
+        <a href="List.html?category=tv">Series</a>
+        <a>Popular</a>
+        <a>Trends</a>
       </div>
       <p class="copy-right">
         Movie website design tutorial by using HTML, pure CSS, and Vanilla JS.
@@ -66,6 +64,6 @@
 
     <script src="scripts/changePageScript.js"></script>
     <script src="scripts/colorModeScript.js"></script>
-    <script src="scripts/findContentForDetail.js"></script>
+    <script src="scripts/takeListScript.js"></script>
   </body>
 </html>
