@@ -16,6 +16,7 @@
 .icon-list i {
   margin-bottom: 55px;
   margin-left: 10px;
+  cursor: pointer;
 }
 .fa-xmark {
   font-size: 30px;

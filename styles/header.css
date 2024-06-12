@@ -15,6 +15,7 @@ header {
   width: 200px;
   font-family: "sen";
   margin-left: 25px;
+  cursor: pointer;
 }
 i {
   font-size: 20px;
