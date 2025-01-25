@@ -1,5 +1,5 @@
 const list = document.querySelector(".list");
-const apiKey = "28e89d863e28cef1a0f8056f0c27867a";
+const apiKey = process.env.JS_APP_API_KEY;
 
 const movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&sort_by=popularity.desc&page=1`;
 const serieUrl = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&sort_by=popularity.desc&page=1`;
